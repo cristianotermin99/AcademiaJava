@@ -6,24 +6,25 @@ public class Municipio {
 
     private String nombre;
     private Localidad[] localidades; // Array de Localidad
+    private int totalNumeroHabitantesMunicipio;
 
     public Municipio(String nombre, Localidad[] localidades) {
         this.nombre = nombre;
         this.localidades = localidades;
+        this.totalNumeroHabitantesMunicipio=0;
     }
 
     public Municipio() {
-        this.nombre = "Desconocido";
+        this.nombre = "";
         this.localidades = new Localidad[0]; // Crear un array de localidades vacío
     }
 
 
-    public Integer getNumeroTotalHabitantesMunicipio() {
+    public void calcularNumeroTotalHabitantesMunicipio() {
         int totalHabitantes = 0;
         for (Localidad localidad : localidades) {
-            totalHabitantes += localidad.getNumeroDeHabitantes();
+            this.totalNumeroHabitantesMunicipio += localidad.getNumeroDeHabitantes();
         }
-        return totalHabitantes;
     }
 
 
@@ -49,6 +50,7 @@ public class Municipio {
         return "Municipio{" +
                 "nombre='" + nombre + '\'' +
                 ", localidades=" + Arrays.toString(localidades) +
+                ", totalNumeroHabitantesMunicipio=" + totalNumeroHabitantesMunicipio +
                 '}';
     }
 
@@ -67,6 +69,15 @@ public class Municipio {
     public void setLocalidades(Localidad[] localidades) {
         this.localidades = localidades;
     }
+
+    public int getTotalNumeroHabitantesMunicipio() {
+        return totalNumeroHabitantesMunicipio;
+    }
+
+    public void setTotalNumeroHabitantesMunicipio(int totalNumeroHabitantesMunicipio) {
+        this.totalNumeroHabitantesMunicipio = totalNumeroHabitantesMunicipio;
+    }
+
     // Otros métodos de la clase Municipio si son necesarios
 
 }

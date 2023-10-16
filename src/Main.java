@@ -22,9 +22,14 @@ public class Main {
         municipio.setNombre("Comunidad de Madrid");
         municipio.addLocalidad(localidad);
         municipio.addLocalidad(localidad);
+        municipio.calcularNumeroTotalHabitantesMunicipio();
 
         System.out.println(municipio);
-        System.out.print(municipio.getNumeroTotalHabitantesMunicipio());
+
+
+
+       // System.out.print(municipio.getNumeroTotalHabitantesMunicipio());
+
 
 
 
