@@ -8,8 +8,8 @@ public class Localidad {
 
     //CONSTRUCTOR
     public Localidad (String nombre, int numeroDeHabitantes) {
-        nombre = nombre;
-        numeroDeHabitantes = numeroDeHabitantes;
+        this.nombre = nombre;
+        this.numeroDeHabitantes = numeroDeHabitantes;
 
     }//cierre del constructor
 

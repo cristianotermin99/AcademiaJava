@@ -21,7 +21,7 @@ public class Main {
         //Añadimos las localidades al objeto municipio
         municipio.setNombre("Comunidad de Madrid");
         municipio.addLocalidad(localidad);
-        municipio.addLocalidad(localidad);
+        municipio.addLocalidad(localidad2);
         municipio.calcularNumeroTotalHabitantesMunicipio();
 
         System.out.println(municipio);
